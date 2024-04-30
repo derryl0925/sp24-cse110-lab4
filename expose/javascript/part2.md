@@ -74,8 +74,11 @@ Explanation: The modifyArray function accepts two parameters: an array and a cal
 
 19. 
 1
+
 4
+
 3
+
 2
 
 Explanation: The JavaScript function printNums() executes a series of console logs interspersed with setTimeout calls, leading to the following output sequence: "1", "4", "3", "2". Initially, "1" is printed directly. Next, there are two setTimeout functions scheduled: one to print "2" after 1000 milliseconds and another to print "3" immediately after 0 milliseconds. However, due to JavaScript's event-driven, non-blocking I/O model, these setTimeout calls do not execute until the current execution stack is clear. This means that "4" is printed next because it follows directly in the code without delay. The setTimeout for "3" then executes as its delay is zero, but it had to wait for the stack to clear, coming after "4". Lastly, after the full second elapses, "2" is printed, concluding the sequence determined by the timeouts and their respective delays.
